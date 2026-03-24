@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoPrime — Venta de Vehículos de Lujo</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="logo">Auto<span>Prime</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#catalogo">Catálogo</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#testimonios">Testimonios</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+      <a href="#contacto" class="btn btn-nav">Cotizar ahora</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-badge">+500 vehículos disponibles</span>
+      <h1>Encuentra tu vehículo <span class="highlight">perfecto</span></h1>
+      <p>Los mejores autos nuevos y seminuevos con garantía, financiamiento y entrega a domicilio.</p>
+      <div class="hero-cta">
+        <a href="#catalogo" class="btn btn-primary">Ver catálogo</a>
+        <a href="#contacto" class="btn btn-outline">Agendar prueba de manejo</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>+1,200</strong><span>Clientes satisfechos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>12 años</strong><span>En el mercado</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>100%</strong><span>Financiamiento aprobado</span></div>
+      </div>
+    </div>
+  </header>
+
+  <!-- BÚSQUEDA RÁPIDA -->
+  <section class="search-bar">
+    <div class="container">
+      <form class="search-form" id="search-form">
+        <div class="search-group">
+          <label>Marca</label>
+          <select name="marca" id="filter-marca">
+            <option value="">Todas</option>
+            <option>BMW</option>
+            <option>Mercedes-Benz</option>
+            <option>Audi</option>
+            <option>Toyota</option>
+            <option>Ford</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label>Tipo</label>
+          <select name="tipo" id="filter-tipo">
+            <option value="">Todos</option>
+            <option>Sedán</option>
+            <option>SUV</option>
+            <option>Coupé</option>
+            <option>Pickup</option>
+          </select>
+        </div>
+        <div class="search-group">
+          <label>Precio máx.</label>
+          <select name="precio" id="filter-precio">
+            <option value="">Sin límite</option>
+            <option value="30000">$30,000</option>
+            <option value="60000">$60,000</option>
+            <option value="100000">$100,000</option>
+          </select>
+        </div>
+        <button type="submit" class="btn btn-primary search-btn">Buscar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- CATÁLOGO -->
+  <section class="section" id="catalogo">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Catálogo</span>
+        <h2>Vehículos destacados</h2>
+        <p>Selección premium con los mejores precios del mercado</p>
+      </div>
+      <div class="cars-grid" id="cars-grid">
+
+        <article class="car-card" data-marca="BMW" data-tipo="Sedán" data-precio="85000">
+          <div class="car-img">
+            <div class="car-placeholder bmw-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M20,70 Q30,40 60,38 L80,35 L120,35 L150,38 Q175,40 180,70 Z" fill="rgba(255,255,255,0.15)"/><circle cx="55" cy="72" r="14" fill="rgba(255,255,255,0.2)"/><circle cx="145" cy="72" r="14" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge">Nuevo</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>BMW Serie 3</h3>
+              <span class="car-year">2024</span>
+            </div>
+            <p class="car-type">Sedán · Automático · Gasolina</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 5.8s</li>
+              <li>⚙️ 258 hp</li>
+              <li>📍 25 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$85,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-marca="Mercedes-Benz" data-tipo="SUV" data-precio="95000">
+          <div class="car-img">
+            <div class="car-placeholder mercedes-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M15,68 Q25,35 55,32 L85,30 L115,30 L155,32 Q180,35 185,68 Z" fill="rgba(255,255,255,0.15)"/><circle cx="50" cy="70" r="14" fill="rgba(255,255,255,0.2)"/><circle cx="150" cy="70" r="14" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge badge-hot">Popular</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Mercedes GLE</h3>
+              <span class="car-year">2024</span>
+            </div>
+            <p class="car-type">SUV · Automático · Híbrido</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 6.1s</li>
+              <li>⚙️ 367 hp</li>
+              <li>📍 22 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$95,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-marca="Audi" data-tipo="Coupé" data-precio="72000">
+          <div class="car-img">
+            <div class="car-placeholder audi-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M25,72 Q35,42 65,38 L90,36 L110,36 L145,38 Q170,42 175,72 Z" fill="rgba(255,255,255,0.15)"/><circle cx="58" cy="74" r="13" fill="rgba(255,255,255,0.2)"/><circle cx="142" cy="74" r="13" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge">Nuevo</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Audi A5 Coupé</h3>
+              <span class="car-year">2024</span>
+            </div>
+            <p class="car-type">Coupé · Automático · Gasolina</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 5.1s</li>
+              <li>⚙️ 261 hp</li>
+              <li>📍 23 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$72,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-marca="Toyota" data-tipo="SUV" data-precio="45000">
+          <div class="car-img">
+            <div class="car-placeholder toyota-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M15,70 Q25,36 58,33 L88,31 L112,31 L152,33 Q178,36 185,70 Z" fill="rgba(255,255,255,0.15)"/><circle cx="52" cy="72" r="14" fill="rgba(255,255,255,0.2)"/><circle cx="148" cy="72" r="14" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge badge-offer">Oferta</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Toyota RAV4</h3>
+              <span class="car-year">2023</span>
+            </div>
+            <p class="car-type">SUV · Automático · Híbrido</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 8.1s</li>
+              <li>⚙️ 219 hp</li>
+              <li>📍 34 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$45,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-marca="Ford" data-tipo="Pickup" data-precio="55000">
+          <div class="car-img">
+            <div class="car-placeholder ford-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M10,68 Q18,38 48,35 L80,33 L120,33 L162,35 Q185,38 190,68 Z" fill="rgba(255,255,255,0.15)"/><circle cx="45" cy="70" r="14" fill="rgba(255,255,255,0.2)"/><circle cx="155" cy="70" r="14" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge">Nuevo</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>Ford F-150</h3>
+              <span class="car-year">2024</span>
+            </div>
+            <p class="car-type">Pickup · Automático · Gasolina</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 6.5s</li>
+              <li>⚙️ 400 hp</li>
+              <li>📍 18 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$55,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="car-card" data-marca="BMW" data-tipo="SUV" data-precio="110000">
+          <div class="car-img">
+            <div class="car-placeholder bmw2-bg">
+              <svg viewBox="0 0 200 100" class="car-svg"><path d="M12,68 Q22,34 52,31 L82,29 L118,29 L158,31 Q182,34 188,68 Z" fill="rgba(255,255,255,0.15)"/><circle cx="48" cy="70" r="14" fill="rgba(255,255,255,0.2)"/><circle cx="152" cy="70" r="14" fill="rgba(255,255,255,0.2)"/></svg>
+            </div>
+            <span class="car-badge badge-hot">Premium</span>
+            <button class="car-fav" aria-label="Favorito">♡</button>
+          </div>
+          <div class="car-info">
+            <div class="car-header">
+              <h3>BMW X5 M</h3>
+              <span class="car-year">2024</span>
+            </div>
+            <p class="car-type">SUV · Automático · Gasolina</p>
+            <ul class="car-features">
+              <li>🏎 0–100 en 4.3s</li>
+              <li>⚙️ 523 hp</li>
+              <li>📍 16 km/l</li>
+            </ul>
+            <div class="car-footer">
+              <div class="car-price">$110,000 <small>USD</small></div>
+              <a href="#contacto" class="btn btn-sm">Cotizar</a>
+            </div>
+          </div>
+        </article>
+
+      </div>
+      <div class="no-results hidden" id="no-results">
+        <p>No se encontraron vehículos con los filtros seleccionados.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section class="section section-dark" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Servicios</span>
+        <h2>Todo lo que necesitas en un solo lugar</h2>
+        <p>Ofrecemos una experiencia de compra completa y sin complicaciones</p>
+      </div>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon">🚗</div>
+          <h3>Test Drive</h3>
+          <p>Agenda una prueba de manejo sin costo. Llevamos el vehículo hasta tu domicilio.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">💳</div>
+          <h3>Financiamiento</h3>
+          <p>Planes de financiamiento flexibles con tasa preferencial desde 0.8% mensual.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔒</div>
+          <h3>Garantía extendida</h3>
+          <p>Todos los vehículos incluyen garantía de 2 años o 50,000 km sin costo extra.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">📋</div>
+          <h3>Trámites incluidos</h3>
+          <p>Nos encargamos de toda la documentación, placas y traspaso de manera ágil.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🚚</div>
+          <h3>Entrega a domicilio</h3>
+          <p>Recibe tu vehículo en la puerta de tu casa en toda la república.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">🔄</div>
+          <h3>Permuta tu auto</h3>
+          <p>Entrega tu vehículo actual como parte de pago. Valuación justa garantizada.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TESTIMONIOS -->
+  <section class="section" id="testimonios">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Testimonios</span>
+        <h2>Lo que dicen nuestros clientes</h2>
+      </div>
+      <div class="testimonials-slider" id="testimonials-slider">
+        <div class="testimonial active">
+          <div class="stars">★★★★★</div>
+          <p>"Proceso increíblemente fácil. En 3 días ya tenía mi BMW en la puerta de mi casa. El equipo de AutoPrime fue muy profesional en todo momento."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">JM</div>
+            <div>
+              <strong>José Martínez</strong>
+              <span>BMW Serie 3 — Ciudad de México</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"El financiamiento fue aprobado en menos de 24 horas. Excelente trato, sin letras chiquitas. Ya es la segunda vez que compro con ellos."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">AL</div>
+            <div>
+              <strong>Ana López</strong>
+              <span>Toyota RAV4 — Monterrey</span>
+            </div>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">★★★★★</div>
+          <p>"Me dieron un excelente precio por mi auto de permuta. El proceso de compra fue transparente y el equipo siempre estuvo disponible para resolver dudas."</p>
+          <div class="testimonial-author">
+            <div class="author-avatar">CR</div>
+            <div>
+              <strong>Carlos Ruiz</strong>
+              <span>Mercedes GLE — Guadalajara</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="testimonial-dots" id="testimonial-dots">
+        <button class="dot active" data-index="0"></button>
+        <button class="dot" data-index="1"></button>
+        <button class="dot" data-index="2"></button>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>¿Listo para encontrar tu próximo vehículo?</h2>
+      <p>Habla con un asesor ahora y obtén tu cotización personalizada sin compromiso.</p>
+      <a href="#contacto" class="btn btn-primary btn-lg">Contactar asesor</a>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="section" id="contacto">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Contacto</span>
+        <h2>Hablemos de tu próximo auto</h2>
+        <p>Déjanos tus datos y un asesor se pondrá en contacto contigo en menos de 2 horas.</p>
+      </div>
+      <div class="contact-layout">
+        <form class="contact-form" id="contact-form" novalidate>
+          <div class="form-row">
+            <div class="form-group">
+              <label for="nombre">Nombre completo *</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+              <span class="field-error" id="error-nombre"></span>
+            </div>
+            <div class="form-group">
+              <label for="telefono">Teléfono *</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="+52 55 1234 5678" required />
+              <span class="field-error" id="error-telefono"></span>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico *</label>
+            <input type="email" id="email" name="email" placeholder="tu@correo.com" required />
+            <span class="field-error" id="error-email"></span>
+          </div>
+          <div class="form-group">
+            <label for="interes">Vehículo de interés</label>
+            <select id="interes" name="interes">
+              <option value="">Selecciona un modelo</option>
+              <option>BMW Serie 3</option>
+              <option>Mercedes GLE</option>
+              <option>Audi A5 Coupé</option>
+              <option>Toyota RAV4</option>
+              <option>Ford F-150</option>
+              <option>BMW X5 M</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos qué buscas..."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-full" id="submit-btn">Enviar solicitud</button>
+          <div class="form-success hidden" id="form-success">
+            ✅ ¡Gracias! Tu solicitud fue enviada. Te contactaremos pronto.
+          </div>
+        </form>
+        <div class="contact-info">
+          <div class="info-card">
+            <h3>Visítanos</h3>
+            <p>Av. Insurgentes Sur 1234, Col. Del Valle, Ciudad de México</p>
+          </div>
+          <div class="info-card">
+            <h3>Horarios</h3>
+            <p>Lun–Vie: 9:00–19:00<br/>Sáb: 9:00–15:00<br/>Dom: Cerrado</p>
+          </div>
+          <div class="info-card">
+            <h3>Llámanos</h3>
+            <p>+52 55 1234 5678<br/>+52 55 8765 4321</p>
+          </div>
+          <div class="info-card">
+            <h3>WhatsApp</h3>
+            <p>Escríbenos directamente<br/>para atención inmediata.</p>
+            <a href="#" class="btn btn-outline btn-sm mt-1">Abrir WhatsApp</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <a href="#" class="logo">Auto<span>Prime</span></a>
+        <p class="footer-tagline">Los mejores vehículos, la mejor experiencia.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#catalogo">Catálogo</a>
+        <a href="#servicios">Servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <p class="footer-copy">© 2024 AutoPrime. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
